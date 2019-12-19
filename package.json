@@ -1,0 +1,48 @@
+{
+  "name": "@helgoboss/droplib-pdf",
+  "version": "0.1.0",
+  "description": "Adds PDF support to droplib",
+  "types": "lib/index.d.ts",
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helgoboss/droplib-pdf.git"
+  },
+  "keywords": [],
+  "author": "helgoboss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helgoboss/droplib-pdf/issues"
+  },
+  "homepage": "https://github.com/helgoboss/droplib-pdf#readme",
+  "devDependencies": {
+    "@types/fs-extra": "^8.0.1",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.18",
+    "@types/puppeteer": "^2.0.0",
+    "@types/tmp": "^0.1.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "@helgoboss/droplib": "^0.4.0",
+    "puppeteer": "^2.0.0",
+    "tmp-promise": "^2.0.2"
+  }
+}
